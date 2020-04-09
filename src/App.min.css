@@ -1,0 +1,1 @@
+:root{background-color:red;font-size:calc(.8em + 1vw)}.panel{height:100vh;display:grid;grid-template-columns:1fr;grid-template-rows:2fr 1fr}.keypad{margin:auto;width:80%;display:flex;flex-wrap:wrap}.display{width:60%;margin:auto;background-color:black;color:white}
