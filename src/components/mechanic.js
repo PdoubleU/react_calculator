@@ -19,4 +19,5 @@ Math.decimal = function(n, k)
     n = Math.round(Math.round(n*factor)/10);
     return n/(factor/10);
 }
+
 export default calculate;

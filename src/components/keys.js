@@ -36,7 +36,7 @@ const keyList = [{
     id: 'eight',
   },{
     keyCode: 105,
-    keyTrigger: '9',
+    keyTrigger: 9,
     id: 'nine',
   },{
     keyCode: 107,

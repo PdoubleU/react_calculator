@@ -17,6 +17,11 @@
   flex-wrap: wrap;
 }
 
+.singlepad {
+  cursor: pointer;
+  background-color: black;
+}
+
 .display {
   display: flex;
   flex-direction: column;
