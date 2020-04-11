@@ -1,5 +1,5 @@
 :root{
-  background-color: red;
+  background-color: rgb(61, 61, 61);
   font-size: calc(.8em + 1vw);
 }
 .panel{
@@ -15,8 +15,19 @@
   flex-wrap: wrap;
 }
 .display{
-  width: 60%;
+  display: flex;
+  flex-direction: column;
+  min-width: 20em;
+  min-height: 10em;
   margin: auto;
-  background-color: black;
+  background-color: rgb(94, 94, 94);
   color: white;
+  & .number{
+    direction: rtl;
+    unicode-bidi: embed;
+    margin: auto;
+    min-width: 15em;
+    min-height: 2em;
+    background-color: cadetblue;
+  }
 }
