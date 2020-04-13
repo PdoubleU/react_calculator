@@ -1,13 +1,15 @@
 import React from 'react';
+import ReactFCCtest from 'react-fcctest';
 
 class Display extends React.Component{
     render(){
         return(
-        <div className='display'>
-            <div id='number' className='number'>{this.props.previousValue}</div>
-            <div id='number' className='number'>{this.props.operator}</div>
-            <div id='number' className='number'>{this.props.currentValue}</div>
-            <div id='number' className='number'>{this.props.result}</div>
+        <div className='display' id='display'>
+            <span className='number'>
+                <span>{this.props.currentValue}</span>
+                <span>{this.props.result}</span>
+            </span>
+        <ReactFCCtest/>
         </div>
         )
     }

@@ -5,7 +5,7 @@ function calculate(numOne, numTwo, operator){
       break;
       case '-': result = Math.decimal(numOne-numTwo,4);
       break;
-      case '*': result = Math.decimal(numOne*numTwo,4);
+      case 'x': result = Math.decimal(numOne*numTwo,4);
       break;
       case '/': result = Math.decimal(numOne/numTwo,4);
       break;

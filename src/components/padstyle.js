@@ -1,13 +1,17 @@
 const inactive = {
+    border: 'none',
+    boxShadow: '.1em .1em black',
     padding: '1em',
     backgroundColor: 'white',
-    margin: '.5em',
+    marginTop: '0',
 }
 const active = {
+    borderStyle: 'none',
     padding: '1em',
     backgroundColor: 'grey',
     color: 'white',
-    margin: '.5em'
+    height: '98%',
+    top: '.02em'
 }
 
 export {inactive, active};
