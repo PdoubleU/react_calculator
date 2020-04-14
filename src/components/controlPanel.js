@@ -3,81 +3,66 @@ import React from 'react';
 import Display from './display';
 import Keyboard from './keyboard';
 import KEYLIST from './keys';
-import calculate from './mechanic';
+//import calculate from './mechanic';
 class Control extends React.Component{
     constructor(props){
         super(props);
-        this.state = {
+        this.initialState = {
             keyList: KEYLIST,
-            currentValue: '',
-            secondValue: '',
-            operator: ''
+            currentValue: '0',
+            lastType: '',
+            prevButton: '',
+            result: ''
         }
+    this.state = this.initialState;
     this.getValue = this.getValue.bind(this);
     }
 componentDidMount() {
-    document.addEventListener('click', this.getValue);
+    document.addEventListener('click', this.getValue)
 }
-getValue(e){
-    const nodeVal = e.target.firstChild.nodeValue;
-    const ISOPERATOR = new RegExp(/\+|-|\/|x/i);
-    const ISEQUALIZATOR = new RegExp(/=/);
-    const ISDECIMAL = new RegExp(/\./g);
-    const ISCLEAR = new RegExp(/a/ig);
-    const ISNUMBER = new RegExp(/[0-9]/);
-    this.state.keyList.map((element, index, newArr )=>{
-        if(ISOPERATOR.test(nodeVal)&&nodeVal===newArr[index].keyTrigger){
-            console.log('isOperator');
-            this.setState({
-                operator: newArr[index].keyTrigger,
-                result:''
-            })
-        } else if ((ISEQUALIZATOR.test(nodeVal)&&nodeVal===newArr[index].keyTrigger)
-                    ||(ISOPERATOR.test(this.state.operator)&&ISOPERATOR.test(nodeVal)&&nodeVal===newArr[index].keyTrigger)){
-            console.log('isEqu');
-            this.setState({
-                result: calculate(  parseFloat(this.state.currentValue),
-                                    parseFloat(this.state.secondValue),
-                                    this.state.operator),
-                        })
-            this.setState({
-                operator: newArr[index].keyTrigger,
-                secondValue: '',
-                currentValue: this.state.result
-            })
+    getValue(e){
+        const ISBUTTON = new RegExp(/[0-9]|\+|-|\/|x|^a|\.|=/gi);
+        const ISOPERATOR = new RegExp(/\+|-|\/|x/);
+        const NODEVAL = e.target.value;
+    if(ISBUTTON.test(NODEVAL)){
+            if(NODEVAL==='.'&&this.state.prevButton!=='.') {                                /*this part checks if pressed button is a dot or previously pressed buton is dot*/
+                let CURRENTNUMBER = this.state.currentValue.split(/\+|-|x|\//).slice(-1);   /*statement makes sure that there is just one dot in each part of eqation*/
+                if(!/\./.test(CURRENTNUMBER[0])&&CURRENTNUMBER[0]!==''){                    /*if dot is detected statement do not allow to enter another dot*/
+                    this.setState({
+                        currentValue: this.state.currentValue + '.',
+                        prevButton: NODEVAL
+                        })} else if(!/\./.test(CURRENTNUMBER[0])){                          /*part works with dot button pressed on the very beggining and after operator as well*/
+                            this.setState({currentValue: this.state.currentValue + '0.',prevButton: NODEVAL})
+                        }                                                                   /*when the dot button is pressed and this is very first operation it puts zero in front*/
+
+            }
+            else if (NODEVAL!=='.'&&!/^A|=/.test(NODEVAL)&&!ISOPERATOR.test(NODEVAL)){      /*here if there is initial zero on the screen it will be replaced with enterend number*/
+                if(this.state.currentValue==='0'){
+                    this.setState({
+                        currentValue: NODEVAL,
+                        prevButton: NODEVAL
+                    })                                                                      /*otherwise the number will be just added to existing string*/
+                } else {this.setState({currentValue: this.state.currentValue + NODEVAL,prevButton: NODEVAL})};
+            }
+            else if (NODEVAL!=='.'&&!/^A/.test(NODEVAL)&&ISOPERATOR.test(NODEVAL)){         /*check if operator entered consecutively two or more times*/
+                let checkIfNegative = this.state.currentValue.split('').slice(-2);
+                console.log(checkIfNegative);                                               /*if yes, previus operator is replaced with new one*/
+                if(ISOPERATOR.test(this.state.prevButton)){
+                    let changeOperator = this.state.currentValue.split('');
+                    changeOperator.splice([changeOperator.length-1],1, NODEVAL);
+                    this.setState({currentValue: changeOperator.join(''),prevButton: NODEVAL});
+                    console.log(this.state);
+                } else if(checkIfNegative[0]==='-'
+                        &&checkIfNegative[1]==='-'){
+                                console.log('double minus');
+                } else {this.setState({currentValue: this.state.currentValue + NODEVAL,prevButton: NODEVAL})}
+            }
+            else if (/^A/.test(NODEVAL)){                                                   /*restart screen and state to initial one - clear button*/
+                this.setState(this.initialState)
+            }
         }
-        else if (ISDECIMAL.test(nodeVal)&&nodeVal===newArr[index].keyTrigger&&!ISDECIMAL.test(this.state.currentValue)){
-            console.log('isDEcimal');
-            this.setState({
-                currentValue: '0' + nodeVal
-            })
-        }
-        else if (ISCLEAR.test(nodeVal)&&nodeVal===newArr[index].keyTrigger){
-            console.log('isClear');
-            this.setState({
-                currentValue: '', secondValue: '', operator: '', result: ''
-            })
-        }
-        else if (ISNUMBER.test(nodeVal)
-                &&nodeVal===String(newArr[index].keyTrigger)
-                &&nodeVal!==this.state.currentValue
-                &&!ISOPERATOR.test(this.state.operator)){
-                console.log(this.state.operator+' empty');
-            this.setState({
-                currentValue: this.state.currentValue.concat(newArr[index].keyTrigger)
-            })
-        }
-        else if (ISNUMBER.test(nodeVal)
-                &&nodeVal===String(newArr[index].keyTrigger)
-                &&nodeVal!==this.state.secondValue
-                &&ISOPERATOR.test(this.state.operator)){
-                    console.log('message from secondVal');
-            this.setState({
-                secondValue: this.state.secondValue.concat(newArr[index].keyTrigger)
-            })
     }
-    });
-}
+
     render(){
         let panel;
         panel = this.state.keyList.map((obj, i, panelArr)=>{
@@ -91,7 +76,7 @@ getValue(e){
         });
         return(
         <div className='calculator'>
-            <Display currentValue={this.state.currentValue+this.state.operator+this.state.secondValue}
+            <Display currentValue={this.state.currentValue}
                 result={this.state.result}/>
             <span className='keyPad'>{panel}</span>
         </div>

@@ -22,8 +22,8 @@ changePadStyle(){
         }
     }
 handleClick(e){
-    const ISBUTTON = new RegExp(/[0-9]|\+|-|\/|\*|^a|\.|=/gi)
-    if(ISBUTTON.test(e.target.firstChild.nodeValue)){
+    const ISBUTTON = new RegExp(/[0-9]|\+|-|\/|x|^A|\.|=/gi)
+    if(ISBUTTON.test(e.target.value)){
         this.changePadStyle();
         setTimeout(()=>this.changePadStyle(), 150);
     }
@@ -31,7 +31,10 @@ handleClick(e){
 
 render(){
     return(
-    <button style={this.state.keyPad} onClick={this.handleClick} className='pad' id={this.props.id}>{this.props.keyTrigger}</button>
+    <button style={this.state.keyPad}
+            onClick={this.handleClick}
+            className='pad' id={this.props.id}
+            value={this.props.keyTrigger}> {this.props.keyTrigger} </button>
     )
     }
 }

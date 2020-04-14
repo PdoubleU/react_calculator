@@ -1,7 +1,3 @@
-body {
-  display: flex;
-}
-
 :root {
   background-color: #3d3d3d;
   font-size: calc(.8em + 1vw);
@@ -9,13 +5,21 @@ body {
 }
 
 #root {
-  margin: auto;
+  display: flex;
   box-sizing: inherit;
+  margin-top: 50%;
+  transform: translateY(-50%);
+}
+
+.panel {
+  margin: auto;
+  display: flex;
 }
 
 .calculator {
-  height: 80vh;
-  width: 40vh;
+  margin: auto;
+  height: auto;
+  width: 40vw;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, auto);
@@ -49,7 +53,7 @@ body {
   grid-column: span;
   display: flex;
   width: 100%;
-  min-height: 5em;
+  height: 2.5rem;
   margin: 0;
   background-color: #5e5e5e;
   color: white;
@@ -59,10 +63,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  direction: rtl;
-  unicode-bidi: embed;
-  margin: auto;
-  min-width: 15em;
-  min-height: 2em;
+  width: 100%;
+  margin: 0;
   background-color: cadetblue;
 }

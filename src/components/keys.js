@@ -1,71 +1,71 @@
-const KEYLIST = [{
-    keyCode: 46,
+const valLIST = [{
+    val: 'ac',
     keyTrigger: 'AC',
     id: 'clear',
   },{
-    keyCode: 111,
+    val: '/',
     keyTrigger: '/',
     id: 'divide',
   },{
-    keyCode: 106,
+    val: 'x',
     keyTrigger: 'x',
     id: 'multiply',
   },{
-    keyCode: 103,
+    val: '7',
     keyTrigger: 7,
     id: 'seven',
   },{
-    keyCode: 104,
+    val: '8',
     keyTrigger: 8,
     id: 'eight',
   },{
-    keyCode: 105,
+    val: '9',
     keyTrigger: 9,
     id: 'nine',
   },{
-    keyCode: 109,
+    val: '-',
     keyTrigger: '-',
     id: 'subtract',
   },{
-    keyCode: 100,
+    val: '4',
     keyTrigger: 4,
     id: 'four',
   },{
-    keyCode: 101,
+    val: '5',
     keyTrigger: 5,
     id: 'five',
   },{
-    keyCode: 102,
+    val: '6',
     keyTrigger: 6,
     id: "six",
   },{
-    keyCode: 107,
+    val: '+',
     keyTrigger: '+',
     id: 'add',
   },{
-    keyCode: 97,
+    val: '1',
     keyTrigger: 1,
     id: 'one',
   }, {
-    keyCode: 98,
+    val: '2',
     keyTrigger: 2,
     id: 'two',
   }, {
-    keyCode: 99,
+    val: '3',
     keyTrigger: 3,
     id: 'three',
   },{
-    keyCode: 13,
+    val: '=',
     keyTrigger: '=',
     id: 'equals',
   },{
-    keyCode: 96,
+    val: '0',
     keyTrigger: 0,
     id: 'zero',
   },{
-    keyCode: 110,
+    val: '.',
     keyTrigger: '.',
     id: 'decimal',
   },
 ];
-export default KEYLIST;
+export default valLIST;
