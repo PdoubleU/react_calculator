@@ -1,13 +1,13 @@
-function calculate(numOne, numTwo, operator){
+function calculate(numOne, operator, numTwo){
     var result;
     switch(operator){
-      case '+': result = Math.decimal(numOne+numTwo,4);
+      case '+': result = Math.decimal(numOne + numTwo,4);
       break;
-      case '-': result = Math.decimal(numOne-numTwo,4);
+      case '-': result = Math.decimal(numOne - numTwo,4);
       break;
-      case 'x': result = Math.decimal(numOne*numTwo,4);
+      case 'x': result = Math.decimal(numOne * numTwo,4);
       break;
-      case '/': result = Math.decimal(numOne/numTwo,4);
+      case '/': result = Math.decimal(numOne / numTwo,4);
       break;
       default: result = undefined;
     }

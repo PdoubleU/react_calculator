@@ -1,13 +1,13 @@
 const inactive = {
     border: 'none',
     boxShadow: '.1em .1em black',
-    padding: '1em',
+    padding: '.8em 1.2em',
     backgroundColor: 'white',
-    marginTop: '0',
+    marginTop: '0'
 }
 const active = {
     borderStyle: 'none',
-    padding: '1em',
+    padding: '.8em 1.2em',
     backgroundColor: 'grey',
     color: 'white',
     height: '98%',
