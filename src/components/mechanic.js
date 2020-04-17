@@ -1,3 +1,6 @@
+/*function makes simple operations on provided numbers.
+Precision up to 4 digits*/
+
 function calculate(numOne, operator, numTwo){
     var result;
     switch(operator){

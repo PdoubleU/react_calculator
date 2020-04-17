@@ -1,3 +1,5 @@
+/*handle with click event on particular button.
+It changes the button style. Used for creating keyboard consisting all buttons*/
 import React from 'react';
 import {inactive, active} from './padstyle';
 

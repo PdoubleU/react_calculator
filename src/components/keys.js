@@ -1,3 +1,5 @@
+/*this object is use to map through it to make button elements.
+Its order is important to be properly displayed on the screen!!!*/
 const valLIST = [{
     val: 'ac',
     keyTrigger: 'AC',

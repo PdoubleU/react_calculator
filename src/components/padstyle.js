@@ -1,3 +1,4 @@
+/*constans belowe are used for buttons animation*/
 const inactive = {
     border: 'none',
     boxShadow: '.1em .1em black',
