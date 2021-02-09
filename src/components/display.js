@@ -1,5 +1,5 @@
 /*it takes two properties from controlPanel: currentValue and result.
-Its role is display them in specific area of calculator*/
+Its role is to display them in specific area of calculator*/
 import React from 'react';
 import ReactFCCtest from 'react-fcctest';
 
