@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # React quote generator
 
-![GitHub Logo](/images/calculator.bmp)
+![GitHub Logo](/images/calc.bmp)
 
 
 [Lets go to live preview](https://github.com/PdoubleU/react_calculator_exercise_04_2020)
