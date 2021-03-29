@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# React quote generator
+# React calculator
 
 ![GitHub Logo](/images/calc.bmp)
 
