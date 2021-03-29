@@ -2,18 +2,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # React quote generator
 
-![GitHub Logo](/images/starcab.bmp)
+![GitHub Logo](/images/calculator.bmp)
 
 
-[Lets go to live preview](starcab.wroclaw.pl)
+[Lets go to live preview](https://github.com/PdoubleU/react_calculator_exercise_04_2020)
 
 
-Website presents local transportation company. Provides simple information (adress, services, etc.) and allows to contact with the company owners by form. It is available in two languages: polish and english.
+This project is a simple calculator that is dividing, multipling, adding and substracting. The idea was to practice more complex React applications.
 
 
 ## Used technologies and approaches
 
-This was one of few projects during the course on The Free Code Camp platform required to pass Front End Libraries certification. 
+This was one of few projects during the course on The Free Code Camp platform required to pass Front End Libraries certification.
 
 I have used following technologies:
 
