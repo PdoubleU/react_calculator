@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![GitHub Logo](/images/calc.bmp)
 
 
-[Lets go to live preview](https://github.com/PdoubleU/react_calculator_exercise_04_2020)
+[Lets go to live preview](https://pdoubleu.github.io/react_calculator_exercise_04_2020)
 
 
 This project is a simple calculator that is dividing, multiplying, adding and substracting. The idea was to practice more complex React applications.
