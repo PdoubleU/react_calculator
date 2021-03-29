@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/PdoubleU/react_calculator_exercise_04_2020/precache-manifest.5f8ee9a6e19e5ca133e9c6d4a7d1b99d.js"
+  "/PdoubleU/react_calculator_exercise_04_2020/precache-manifest.96039e1d9fd127d570112149749b5a45.js"
 );
 
 self.addEventListener('message', (event) => {

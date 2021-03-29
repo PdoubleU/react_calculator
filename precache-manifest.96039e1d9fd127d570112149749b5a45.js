@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "20913b36ed3fffeb3b3f3abef5940df4",
+    "revision": "73a62f61ea50c11f97ce90471d55dbda",
     "url": "/PdoubleU/react_calculator_exercise_04_2020/index.html"
   },
   {
-    "revision": "860c7b9670ddf2a127d3",
-    "url": "/PdoubleU/react_calculator_exercise_04_2020/static/css/main.ac567949.chunk.css"
+    "revision": "a3222244278f120884ab",
+    "url": "/PdoubleU/react_calculator_exercise_04_2020/static/css/main.68ea25b9.chunk.css"
   },
   {
     "revision": "5094b1b08721b2607bc7",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PdoubleU/react_calculator_exercise_04_2020/static/js/2.5ebd05dd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "860c7b9670ddf2a127d3",
+    "revision": "a3222244278f120884ab",
     "url": "/PdoubleU/react_calculator_exercise_04_2020/static/js/main.6b95b288.chunk.js"
   },
   {
