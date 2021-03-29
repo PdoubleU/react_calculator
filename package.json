@@ -2,7 +2,7 @@
   "name": "calculator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/PdoubleU/react_calculator_exercise_04_2020",
+  "homepage": "https://pdoubleu.github.io/react_calculator_exercise_04_2020",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
